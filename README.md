@@ -7,7 +7,7 @@ This repository contains a [NuxtJS Layer](https://nuxt.com/docs/getting-started/
 The layer is published on GitHub which can be added as a dependency:
 
 ```shell
-pnpm add github.com:fsinfuhh/nuxt_layer_mafiasi
+pnpm add https://github.com/fsinfuhh/nuxt_layer_mafiasi.git
 ```
 
 To then use it, add it to the `extends` key in `nuxt.config.ts`:
