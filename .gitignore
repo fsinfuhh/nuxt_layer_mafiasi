@@ -8,4 +8,5 @@ nuxt.d.ts
 .data
 .env
 package-lock.json
+pnpm-lock.yaml
 dist
