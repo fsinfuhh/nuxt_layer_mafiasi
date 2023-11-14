@@ -1,9 +1,13 @@
 export default defineAppConfig({
-  mafiasi: {}
+  mafiasi: {
+    openidScopes: "openid"
+  }
 })
 
 declare module '@nuxt/schema' {
   interface AppConfigInput {
-    mafiasi?: {}
+    mafiasi?: {
+      openidScopes?: string,
+    }
   }
 }
