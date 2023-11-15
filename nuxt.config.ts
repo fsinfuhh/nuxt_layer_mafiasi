@@ -8,6 +8,9 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/ui",
   ],
+  typescript: {
+    typeCheck: true,
+  },
   devtools: {enabled: true},
   colorMode: {
     classSuffix: "",

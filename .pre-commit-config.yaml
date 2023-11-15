@@ -16,3 +16,9 @@ repos:
         types_or: [ vue, ts, javascript ]
         entry: "pnpm exec eslint"
         args: [ "--fix", "--max-warnings=0" ]
+      - id: typecheck
+        name: typecheck
+        language: system
+        types_or: [ vue, ts, javascript ]
+        pass_filenames: false
+        entry: "pnpm run typecheck"
