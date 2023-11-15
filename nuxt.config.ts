@@ -8,5 +8,19 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/tailwindcss",
   ],
-  devtools: { enabled: true }
+  devtools: { enabled: true },
+  runtimeConfig: {
+    public: {
+      openidIssuer: "https://identity.mafiasi.de/realms/mafiasi",
+      openidClientId: "dev-client"
+    }
+  },
 })
+
+declare module 'nuxt/schema' {
+  interface RuntimeConfig {}
+  interface PublicRuntimeConfig {
+    openidIssuer: string,
+    openidClientId: string,
+  }
+}
