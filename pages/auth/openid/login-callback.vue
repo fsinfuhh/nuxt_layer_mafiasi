@@ -18,9 +18,10 @@ onMounted(async () => {
   // redirect the user based on a stored parameter or fallback to a default value
   const storedNext = window.sessionStorage.getItem("login-next");
   if (storedNext != null) {
-    await navigateTo({path: storedNext}, { replace: true });
+    window.sessionStorage.removeItem("login-next");
+    await navigateTo({path: storedNext}, {replace: true});
   } else {
-    await navigateTo(appConfig.mafiasi.loginRedirectUrl, { replace: true });
+    await navigateTo(appConfig.mafiasi.loginRedirectUrl, {replace: true});
   }
 });
 </script>
