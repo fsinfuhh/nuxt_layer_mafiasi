@@ -1,0 +1,18 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-added-large-files
+
+  - repo: local
+    hooks:
+      - id: lint
+        name: lint
+        language: system
+        types_or: [ vue, ts, javascript ]
+        entry: "pnpm exec eslint"
+        args: [ "--fix", "--max-warnings=0" ]
