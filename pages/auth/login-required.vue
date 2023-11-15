@@ -10,7 +10,9 @@ const route = useRoute();
 <template>
   <UCard>
     <template #header>
-      <h1 class="text-2xl">The page you were trying to visit requires authentication</h1>
+      <h1 class="text-2xl">
+        The page you were trying to visit requires authentication
+      </h1>
     </template>
 
     <template #default>
@@ -20,7 +22,12 @@ const route = useRoute();
         original page.
       </p>
 
-      <UButton :to="{ name: 'login', query: { next: route.query.next } }" size="lg">Login now</UButton>
+      <UButton
+        :to="{ name: 'login', query: { next: route.query.next } }"
+        size="lg"
+      >
+        Login now
+      </UButton>
     </template>
   </UCard>
 </template>

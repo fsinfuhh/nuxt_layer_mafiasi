@@ -24,6 +24,8 @@ onMounted(async () => {
 
 <template>
   <UCard>
-    <h1 class="text-2xl">Redirecting to Mafiasi-Identity...</h1>
+    <h1 class="text-2xl">
+      Redirecting to Mafiasi-Identity...
+    </h1>
   </UCard>
 </template>

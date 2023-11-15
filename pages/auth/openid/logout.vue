@@ -24,6 +24,8 @@ onMounted(async () => {
 
 <template>
   <UCard>
-    <h1 class="text-2xl">You are being logged out...</h1>
+    <h1 class="text-2xl">
+      You are being logged out...
+    </h1>
   </UCard>
 </template>
