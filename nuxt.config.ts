@@ -6,9 +6,12 @@ export default defineNuxtConfig({
   },
   telemetry: false,
   modules: [
-    "@nuxtjs/tailwindcss",
+    "@nuxt/ui",
   ],
-  devtools: { enabled: true },
+  devtools: {enabled: true},
+  colorMode: {
+    classSuffix: "",
+  },
   runtimeConfig: {
     public: {
       openidIssuer: "https://identity.mafiasi.de/realms/mafiasi",
@@ -18,7 +21,9 @@ export default defineNuxtConfig({
 })
 
 declare module 'nuxt/schema' {
-  interface RuntimeConfig {}
+  interface RuntimeConfig {
+  }
+
   interface PublicRuntimeConfig {
     openidIssuer: string,
     openidClientId: string,

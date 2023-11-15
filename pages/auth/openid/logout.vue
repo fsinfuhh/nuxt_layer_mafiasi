@@ -1,9 +1,9 @@
 <script setup lang="ts">
 definePageMeta({
   name: "logout",
+  layout: "notice",
 })
 
-const router = useRouter();
 const userManager = useUserManager();
 
 onMounted(async () => {
@@ -17,11 +17,13 @@ onMounted(async () => {
       post_logout_redirect_uri: redirectUri.href,
     });
   } else {
-    await router.push({path: "/"});
+    await navigateTo({ path: "/" });
   }
 });
 </script>
 
 <template>
-  <h1>You are being logged out...</h1>
+  <UCard>
+    <h1 class="text-2xl">You are being logged out...</h1>
+  </UCard>
 </template>

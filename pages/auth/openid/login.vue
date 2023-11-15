@@ -1,6 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
   name: "login",
+  layout: "notice",
 })
 
 const route = useRoute();
@@ -22,5 +23,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <h1>You are being redirected to Mafiasi-Identity to log you in...</h1>
+  <UCard>
+    <h1 class="text-2xl">Redirecting to Mafiasi-Identity...</h1>
+  </UCard>
 </template>

@@ -8,12 +8,14 @@ const isAuthenticated = computed(() => user != null);
 <template>
   <p>Auth Status: {{ isAuthenticated ? 'logged in' : 'not authenticated' }}</p>
   <p v-if="isAuthenticated">User: {{ user }}</p>
-  <button class="p-1 mr-2 bg-gray-700 text-white">
+  <UButton>
     <NuxtLink :to="{ name: 'login' }">Login</NuxtLink>
-  </button>
-  <button class="p-1 bg-gray-700 text-white">
+  </UButton>
+  <UButton>
     <NuxtLink :to="{ name: 'logout' }">Logout</NuxtLink>
-  </button>
+  </UButton>
 
-  <NuxtLink :to="{ name: 'protected-page' }">Visit protected page</NuxtLink>
+  <UButton>
+    <NuxtLink :to="{ name: 'protected-page' }">Visit protected page</NuxtLink>
+  </UButton>
 </template>
