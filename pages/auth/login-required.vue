@@ -17,7 +17,7 @@ const route = useRoute();
 
     <template #default>
       <p class="mb-4">
-        The page at <i>{{ route.query.next }}</i> you to be logged in to your Mafiasi account.<br>
+        The page at <i>{{ route.query.next }}</i> requires you to be logged in to your Mafiasi account.<br>
         You can click the button below to login using your Mafiasi account after which you will be redirected to the
         original page.
       </p>
