@@ -18,6 +18,11 @@ export default defineNuxtConfig({
       openidClientId: "dev-client"
     }
   },
+  vite: {
+    optimizeDeps: {
+      include: ["oidc-client-ts"],
+    }
+  }
 })
 
 declare module 'nuxt/schema' {
